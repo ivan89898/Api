@@ -20,7 +20,7 @@ class MobileBankApiTestV3 {
                 .get("/demo/accounts")
                 // Проверки
                 .then()
-                .statusCode(400)
+                .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
                 // специализированные проверки - лучше
                 .contentType(ContentType.JSON)

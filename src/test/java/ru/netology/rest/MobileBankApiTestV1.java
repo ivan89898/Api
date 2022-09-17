@@ -35,9 +35,9 @@ class MobileBankApiTestV1 {
                 //.header("Content type", "application/json; charset=UTF-8")
                 .contentType(ContentType.JSON)
                 .body("",hasSize(3))
-                .body("[0].currency",equalTo("RUR"))
+                .body("[0].currency",equalTo("RUB"))
                 .body("[1].currency",equalTo("USD"))
-                .body("[2].currency",equalTo("RUR"))
+                .body("[2].currency",equalTo("RUB"))
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"));
     }
 }
